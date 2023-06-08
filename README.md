@@ -8,27 +8,27 @@ To perform Matrix Multiplication using CUDA and Host and find the Elapsed Time.
 
 ## PROCEDURE:
 
-• Allocate memory for input and output matrices on both the host and GPU device.
+1. Allocate memory for input and output matrices on both the host and GPU device.
 
-• Initialize input matrices A and B with random values on the host.
+2. Initialize input matrices A and B with random values on the host.
 
-• Transfer input matrices A and B from the host to the GPU using cudaMemcpy function.
+3. Transfer input matrices A and B from the host to the GPU using cudaMemcpy function.
 
-• Define kernel function to perform the matrix multiplication operation.
+4. Define kernel function to perform the matrix multiplication operation.
 
-• Launch the kernel function using appropriate number of threads and blocks.
+5. Launch the kernel function using appropriate number of threads and blocks.
 
-• Transfer the output matrix C from the GPU back to the host using cudaMemcpy function.
+6. Transfer the output matrix C from the GPU back to the host using cudaMemcpy function.
 
-• Calculate the elapsed time between the start and end of the matrix multiplication operation
+7. Calculate the elapsed time between the start and end of the matrix multiplication operation
 using cudaEventRecord and cudaEventElapsedTime functions.
 
-• Print the results including the dimensions of the input and output matrices, the time taken
+8. Print the results including the dimensions of the input and output matrices, the time taken
 for the kernel to execute, and any relevant error messages.
 
 ## PROGRAM:
 
-sumMatrixOnGPU.cu:
+### sumMatrixOnGPU.cu:
 ```
 #include "common.h"
 #include <cuda_runtime.h>
